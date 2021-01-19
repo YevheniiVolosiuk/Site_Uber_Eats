@@ -132,11 +132,10 @@ img{
     position: absolute;
     width: 389px;
     height: 204px;
-    top: 81px;
     background: #FFFFFF;
     box-shadow: 0px 0px 16px rgba(117, 117, 117, 0.2);
     border-radius: 2px;
-    transform: translateY(90%);
+    transform: translateY(70%);
 }
 
 .header__mein-name-card-title{
@@ -211,6 +210,7 @@ img{
     font-size: 22px;
     line-height: 34px;
     margin: 56px 0 32px 0;
+
 }    
 .mein__cards{
     display: grid;
@@ -483,15 +483,26 @@ img{
     }
 
     .mein__title{
-        margin-top: 125px;
+        position: relative;
+        margin-top: 50px;
         font-size: 22px;
         text-align: center;
-        margin-bottom: 56px;
+        margin-bottom: 50px;
     }
 
-    .mein__title > h1{
-        border-bottom-width: 50px ;
-        border-bottom: 1px solid  #757575; 
+    .mein__title > h1::before{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        transition: 0.2s;
+        transform: scaleX(0);
+    }
+    .mein__title > h1:hover:before{
+        transform: scaleX(1);
     }
 
     .mein__card{
